@@ -1,0 +1,130 @@
+Elemental Long V1 Changes:
+
+- New MV / Fixed Fire Ele for all Shelling types and Levels, and all Wyyvern Fire Types:
+
+New Normal Levels:			New Wide Levels:		New Long Levels:
+Lvl 1: 9 / 7				Lvl 1: 25 / 12			Lvl 1: 18 / 17
+Lvl 2: 10 / 8				Lvl 2: 27 / 13			Lvl 2: 19 / 18
+Lvl 3: 11 / 9				Lvl 3: 29 / 14			Lvl 3: 20 / 19
+Lvl 4: 12 / 10				Lvl 4: 31 / 15			Lvl 4: 21 / 20
+Lvl 5: 13 / 11				Lvl 5: 33 / 16			Lvl 5: 22 / 21
+Lvl 6: 14 / 12				Lvl 6: 35 / 17			Lvl 6: 23 / 22
+Lvl 7: 15 / 13				Lvl 7: 37 / 18			Lvl 7: 24 / 23
+
+Normal WF:				Wide WF:			Long WF:
+Lvl 1: 36 / 21				Lvl 1: 44 / 24			Lvl 1: 36 / 28
+Lvl 2: 42 / 24				Lvl 2: 50 / 27			Lvl 2: 42 / 31
+Lvl 3: 48 / 27				Lvl 3: 56 / 30			Lvl 3: 48 / 34
+Lvl 4: 54 / 30				Lvl 4: 62 / 33			Lvl 4: 54 / 37
+Lvl 5: 60 / 33				Lvl 5: 68 / 36			Lvl 5: 60 / 40
+Lvl 6: 66 / 36				Lvl 6: 74 / 39			Lvl 6: 66 / 43
+Lvl 7: 72 / 39				Lvl 7: 80 / 42			Lvl 7: 72 / 46
+
+
+
+- Fullburst and WSFB Raw Multipliers adjusted for Shelling buffs
+	Normal: FB +40% --> +32%, WSFB +25% --> +15%
+	Wide: +35% --> -4%, WSFB +5% --> -18%
+	Long: FB +40% --> +7.5%, WSFB +10% --> -4%
+
+
+- Wide Stake Ticks +1 Raw MV, Long -1
+
+
+- Wide and Long Charged Shell Multipliers adjusted for Shelling buffs
+	Wide: +80% --> +60%
+	Long: +80% --> +70%
+
+
+- Long Charged Shelling max charge time 2.5 seconds --> 2.1
+
+
+- Long WF gauge generation multiplier +30% --> +75%
+
+
+- Long gains Elemental Shelling
+	- Raw Long Gunlances retain their fixed fire damage
+	- Status Long Gunlances retain their fixed fire damage and deal 0.55 status on shelling attacks
+	- Elemental Long Gunlances replace their fixed fire damage with 1.5 Ele damage
+		- This damage can be buffed by ele increasing skills
+		- This does apply to Wyvern Fire
+
+
+- Lateral Thrust  MVs 24 --> 30
+
+
+- Guard Thrust MVs 18 --> 24
+
+
+- Wide Sweep MVs 40 --> 57
+
+
+- Artian Weapon Focuses Adjusted
+	Affinity: Long --> Wide
+	Element: Wide --> Long
+
+
+===============================================
+===============================================
+
+
+Elemental Long V2 Changes:
+
+- Bugfixing:
+	- Fixed issues affecting damage with the natives, removed unneccessary files
+	- Fixed issues causing Long stake to deal more damage than intended
+
+- Long Shelling damage buffed but skewed more towards Ele to reward investment and proper hitzone targeting
+	- Raw MVs lowered by 2 at all levels
+		- Fixed Fire damage for Raw and Status GL increased by 6 at all levels
+	- Ele multiplier increased 1.5 --> 2.0
+	- Artillery reworked for Elemental Long shelling, now gives 1.06/1.12/1.18x increased Ele at levels 1/2/3, raw and fixed fire damage buffs removed
+	- Long raw damage multipliers for reworked for Elemental Long Shelling
+		- Fullburst: +7.5% Raw --> +20% Ele
+		- WSFB: -4% Raw --> -4% Ele
+		- Charged Shells: +70% Raw --> 110% Ele
+
+- All Wyrmstake Blast damage adjusted to Normal's Wyrmstake Blast damage
+
+
+===============================================
+===============================================
+
+
+Scorching Wide V1 Changes:
+
+- The original Wide packaged with Elemental Long received some compensation for being stuck with affinity focus, getting bloated uncharged shell MVs
+	- Wide will receive some light nerfs to shelling to make up for some of the buffs it will be receiving with this mod
+		- Uncharged Shells: -2 MVs at all levels
+		- Wyvern Fire: -3 MVs at all levels
+		- Fullburst Modifier: -4% --> -10%
+		- WSFB Modifier: -14% --> -20%
+
+- Wide now gains a Heat Gauge:
+	- Native Razor Sharp at all levels of Heat
+		- Yellow: Level 1
+		- Orange: Level 2
+		- Red: Level 3
+	- Gain MV buffs as your blade heats up
+		- Orange: +4 MVs to Lance attacks
+		- Red: +8 MVs to Lance attacks
+	- Wyvern's Fire to activate Scorching Blade
+		- During Scorching Blade your heat will be locked
+			- Use the white bar to track heat buildup for the next Scorching Blade
+			- Use the black bar to track your locked heat (current heat level = max(white, black)
+			- Use the blue bar to track your remaining time in Scorching Blade
+		- Additionally during Scorching Blade, your lance attacks will gain a secondary damage rider with some unique properties
+			- Orange: 8 MV + 20 Fire Ele
+			- Red: 16 MV + 40 Fire Ele
+			- Scorching Blade rider damage scales with Raw, Affinity, Critical Boost, and Sharpness
+			- Scorching Blade penetrates the toughest hides, the raw portion is calculated as always hitting a wounded 50 HZV
+
+
+###PLEASE NOTE### The script for Scorching Blade's rider damage hijacks the Scorcher skill.  If you have no Scorcher equipped it will add Scorcher to two 
+armor pieces and modify the code, if you have Scorcher 1 already equipped its damage will be averaged into Scorching Blade while its active, regardless of
+heat level. HOWEVER, there is execution time required, starting as soon as the game sees a Wide Gunlance equipped.  Give it a second when you do so, if you
+don't see Scorcher on your skills then you clicked through before the lua added them in
+
+
+===============================================
+===============================================
